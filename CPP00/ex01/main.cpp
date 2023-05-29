@@ -11,26 +11,66 @@
 /* ************************************************************************** */
 
 #include <iostream>
+#include <iomanip>
+#include "Phonebook.hpp" 
+
+std::string	get_line()
+{
+	std::string line;
+
+	while (line.empty() && std::cin.good())
+		getline(std::cin, line);
+	return (line);
+}
+
+void    nokiaAdd(Phonebook *Nokia)
+{
+    Contact c;
+    std::string input;
+        std::cout << "What's his first name? : ";
+    input = get_line();
+    std::cout << std::endl;
+    c.setfirstname(input);
+        std::cout << "What's his last name? : ";
+    input = get_line();
+    std::cout << std::endl;
+    c.setlastname(input);
+        std::cout << "What's his nickname? : ";
+    input = get_line();
+    std::cout << std::endl;
+    c.setnickname(input);
+        std::cout << "What's his Number? : ";
+    input = get_line();
+    std::cout << std::endl;
+    c.setphonenumber(input);
+        std::cout << "What's his darkest secret? : ";
+    input = get_line();
+    std::cout << std::endl;
+    c.setdarkestsecret(input);
+    Nokia->addContact(c);
+}
 
 int main ()
 {
-    Phonebook   Phonebook;
-    std::string command;
-
-    Phonebook.oldest_index = 0;
-    std::cout<<"Enter command : ADD, SEARCH, EXIT";
-    while (std::getline(std::cin, command))
+    Phonebook Nokia;
+    std::string line;
+    std::cout << "ADD, SEARCH, EXIT" << std::endl;
+    while(getline(std::cin, line))
     {
-        if (command == "ADD")
+        if (line.compare("ADD") == 0)
+            nokiaAdd(&Nokia);
+        else if (line.compare("SEARCH") == 0)
         {
-            addContact(&Phonebook.contacts[PhoneBook.oldest_index]);
-            Phonebook.oldest_index++;
+            if (Nokia.getOldestIndex() == 0)
+                std::cout << "No contacts have been saved" << std::endl;
+            else
+                nokiaSearch(&Nokia);
         }
-        else if (command == "SEARCH")
-            searchContact(command);
-        else if (command == "EXIT")
+        else if (line.compare("EXIT") == 0)
             break ;
-        else
-            std::cout<<"Wrong input, try again";
+        else 
+            std::cout << "Wrong input, try again." << std::endl;
+        std::cout << "ADD, SEARCH, EXIT" << std::endl;
     }
+    std::cout << "Exit" << std::endl;
 }

@@ -13,20 +13,20 @@
 #ifndef PHONEBOOK_HPP
 # define PHONEBOOK_HPP
 
-# include "Contact.hpp"
+#include "Contact.hpp"
 
 class Phonebook {
 	private:
-		Contact contacts[8];
-		int		oldest_index;
+		Contact	_contacts[8];
+		int		_oldestIndex;
 
 	public:
 		Phonebook();
-		~PhoneBook();
+		~Phonebook();
+	
 		void	addContact(const Contact &c);
-		void	displayContacts();
-		void	searchContact(int index);
-		int		get_oldest_index() const;
-}:
+		void	searchContact(std::string string);
+		int		getOldestIndex();
+};
 
 #endif

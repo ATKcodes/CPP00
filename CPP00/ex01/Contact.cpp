@@ -60,14 +60,14 @@ std::string	Contact::getlastname() const
 	return this->_lastname;
 }
 
-std::strinh	Contact::getnickname() const
+std::string	Contact::getnickname() const
 {
 	return this->_nickname;
 }
 
 std::string	Contact::getphonenumber() const
 {
-	return this->_phonenumber()const;
+	return this->_phonenumber;
 }
 
 std::string	Contact::getdarkestsecret() const
