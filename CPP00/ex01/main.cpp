@@ -64,7 +64,7 @@ int main ()
             if (Nokia.getOldestIndex() == 0)
                 std::cout << "No contacts have been saved" << std::endl;
             else
-                nokiaSearch(&Nokia);
+                Nokia.nokiaSearch();
         }
         else if (line.compare("EXIT") == 0)
             break ;

@@ -27,6 +27,7 @@ class Phonebook {
 		void	addContact(const Contact &c);
 		void	searchContact(std::string string);
 		int		getOldestIndex();
+		void    nokiaSearch();
 };
 
 #endif
