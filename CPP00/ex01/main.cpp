@@ -55,8 +55,10 @@ int main ()
     Phonebook Nokia;
     std::string line;
     std::cout << "ADD, SEARCH, EXIT" << std::endl;
-    while(getline(std::cin, line))
+    while(std::cin >> line)
     {
+        if (std::cin.eof())
+            break ;
         if (line.compare("ADD") == 0)
             nokiaAdd(&Nokia);
         else if (line.compare("SEARCH") == 0)
@@ -68,7 +70,7 @@ int main ()
         }
         else if (line.compare("EXIT") == 0)
             break ;
-        else 
+        else
             std::cout << "Wrong input, try again." << std::endl;
         std::cout << "ADD, SEARCH, EXIT" << std::endl;
     }

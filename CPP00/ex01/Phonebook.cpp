@@ -42,26 +42,29 @@ void    Phonebook::nokiaSearch()
     std::string nickname;
     int input;
     std::cout << "     index | first name |  last name |  nickname" << std::endl;
-    for (int i = 0; i < this->getOldestIndex(); i++)
+    for (int i = 0; i < 8; i++)
     {
-        firstname = this->_contacts[i].getfirstname();
-        firstname = firstname.substr(0, 10);
-        lastname = this->_contacts[i].getlastname();
-        lastname = lastname.substr(0, 10);
-        nickname = this->_contacts[i].getnickname();
-        nickname = nickname.substr(0, 10);
-        if (firstname.length() > 9)
-            firstname[9] = '.';
-        if (lastname.length() > 9)
-            lastname[9] = '.';
-        if (nickname.length() > 9)
-            nickname[9] = '.';
-        std::cout << std::right << std::setw(10) << (i + 1) << " | " << std::right << std::setw(10) << firstname << " | "
-            << std::right << std::setw(10) << lastname << " | " << std::right << std::setw(10) << nickname << std::endl;
+        if (!this->_contacts[i].getfirstname().empty())
+        {
+            firstname = this->_contacts[i].getfirstname();
+            firstname = firstname.substr(0, 10);
+            lastname = this->_contacts[i].getlastname();
+            lastname = lastname.substr(0, 10);
+            nickname = this->_contacts[i].getnickname();
+            nickname = nickname.substr(0, 10);
+            if (firstname.length() > 9)
+                firstname[9] = '.';
+            if (lastname.length() > 9)
+                lastname[9] = '.';
+            if (nickname.length() > 9)
+                nickname[9] = '.';
+            std::cout << std::right << std::setw(10) << (i + 1) << " | " << std::right << std::setw(10) << firstname << " | "
+                << std::right << std::setw(10) << lastname << " | " << std::right << std::setw(10) << nickname << std::endl;
+        }
     }
     std::cout << "Which contact would you like to see more details?" << std::endl;
     std::cin >> input;
-    if (input > 0 && input < (this->_oldestIndex + 1))
+    if (input > 0 && input < 9 && !this->_contacts[input - 1].getfirstname().empty())
     {
         std::cout << "First name : " << this->_contacts[input - 1].getfirstname() << std::endl;
         std::cout << "Last name : " << this->_contacts[input - 1].getlastname() << std::endl;
