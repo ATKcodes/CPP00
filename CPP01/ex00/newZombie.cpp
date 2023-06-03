@@ -10,4 +10,10 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
+
+Zombie  *newZombie( std::string name){
+    Zombie  *to_return;
+    to_return.setname(name);
+    return (to_return);
+}

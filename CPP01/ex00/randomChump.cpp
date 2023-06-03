@@ -10,4 +10,11 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
+
+void    randomChump(std::string name)
+{
+    Zombie  randomchump;
+    zombie.setname(name);
+    zombie.announce();
+}

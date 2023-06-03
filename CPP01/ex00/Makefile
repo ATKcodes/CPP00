@@ -1,7 +1,7 @@
-NAME	= megaphone
+NAME	= Zombie
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= megaphone.cpp
+SRCS	= Zombie.cpp main.cpp newZombie.cpp randomchump.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)

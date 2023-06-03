@@ -10,17 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <iostream>
+#include "Zombie.hpp"
 
 void    Zombie(){
 
 }
 
 void    ~Zombie(){
-    std::cout << this->_name << std::endl;
+    std::cout << this->_name << "ded" << std::endl;
 }
 
 void    announce()
 {
     std::cout << this->_name << ": BraiiiiiiinnnzzzZ..."<< std::endl;
+}
+
+std::string    getname()
+{
+    return(this->_name);
+}
+
+void    setname(std::string name)
+{
+    this->_name = name;
 }

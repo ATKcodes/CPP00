@@ -12,3 +12,17 @@
 
 #include <iostream>
 
+
+int main()
+{
+	Zombie zombie1;
+	zombie1.setname("dio");
+	zombie1.announce();
+
+	Zombie *zombie2 = newZombie("stronzo");
+	delete zombie2;
+
+	randomChump("diostronzo");
+
+	return 0;
+}
