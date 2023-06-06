@@ -15,6 +15,6 @@
 void    randomChump(std::string name)
 {
     Zombie  randomchump;
-    zombie.setname(name);
-    zombie.announce();
+    randomchump.setname(name);
+    randomchump.announce();
 }

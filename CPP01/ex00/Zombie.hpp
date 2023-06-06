@@ -11,12 +11,12 @@
 /* ************************************************************************** */
 
 #ifndef ZOMBIE_HPP
-# DEFINE ZOMBIE_HPP
+# define ZOMBIE_HPP
 
 #include <iostream>
 #include <string>
 
-Class Zombie {
+class Zombie {
     private :
     std::string _name;
     public :

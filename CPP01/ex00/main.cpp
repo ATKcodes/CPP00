@@ -11,7 +11,7 @@
 /* ************************************************************************** */
 
 #include <iostream>
-
+#include "Zombie.hpp"
 
 int main()
 {
@@ -22,7 +22,7 @@ int main()
 	Zombie *zombie2 = newZombie("stronzo");
 	delete zombie2;
 
-	randomChump("diostronzo");
-
+	randomChump("coglione");
+ls
 	return 0;
 }
