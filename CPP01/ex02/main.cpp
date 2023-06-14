@@ -16,15 +16,14 @@ int main()
 {
     std::string brain;
     std::string *pointer;
-    std::string &reference;
+    std::string &reference = brain;
 
     brain = "HI THIS IS BRAIN";
-    pointer = brain.c_str();
-    reference = &brain;
-    std::cout << "memory address of the string" << &brain << std::endl;
-    std::cout << "memory address of the pointer" << pointer << std::endl;
-    std::cout << "memory address of the reference" << &reference << std::endl;
-    std::cout << "value of the string" << brain << std::endl;
-    std::cout << "value the pointer points to" << *pointer << std::endl;
-    std::cout << "value of the reference" << reference << std::endl;
+    pointer = &brain;
+    std::cout << "memory address of the string : " << &brain << std::endl;
+    std::cout << "memory address of the pointer : " << pointer << std::endl;
+    std::cout << "memory address of the reference : " << &reference << std::endl;
+    std::cout << "value of the string : " << brain << std::endl;
+    std::cout << "value the pointer points to : " << *pointer << std::endl;
+    std::cout << "value of the reference : " << reference << std::endl;
 }
