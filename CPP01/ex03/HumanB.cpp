@@ -15,14 +15,12 @@ void	HumanB::setWeapon(Weapon &newWeapon)
 	this->_weapon = &newWeapon;
 }
 
-void	HumanB::HumanB_attack()
+void	HumanB::attack()
 {
 	if (this->_weapon == nullptr)
 	{
-		std::cout << this->_name << " doesn't have a weapon."
-			<< std::endl;
+		std::cout << this->_name << " doesn't have a weapon." << std::endl;
 		return;
 	}
-	std::cout << this->_name << " attack with their "
-		<< this->_weapon->getType() << "!" << std::endl;
+	std::cout << this->_name << " attack with their " << this->_weapon->getType() << "!" << std::endl;
 }
