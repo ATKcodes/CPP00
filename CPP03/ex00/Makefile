@@ -1,13 +1,13 @@
-NAME	= megaphone
+NAME	= ClapTrap
 CC		= c++
 CFLAG	= -std=c++98 -Wall -Wextra -Werror
-SRCS	= megaphone.cpp
+SRCS	= main.cpp ClapTrap.cpp
 OBJS	= $(SRCS:.cpp=.o)
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CC) $(CFLAG) -o $(NAME) $(OBJS)
 
 clean:
 	rm -f $(OBJS)
