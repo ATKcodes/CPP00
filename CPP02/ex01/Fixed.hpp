@@ -12,14 +12,14 @@ class Fixed
 
 	public:
 		Fixed();
-		Fixed(const int n);
+		Fixed(const int raw);
 		Fixed(const float f);
 		Fixed(const Fixed &other);
 		Fixed &operator=(const Fixed &other);
 		~Fixed();
 
 		int		getRawBits(void) const;
-		void	setRawBits(int const n);
+		void	setRawBits(int const raw);
 		float	toFloat(void) const;
 		int		toInt(void) const;
 };

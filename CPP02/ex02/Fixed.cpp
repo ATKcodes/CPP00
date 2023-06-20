@@ -4,9 +4,9 @@ Fixed::Fixed() : _fixed_point_number(0)
 {
 }
 
-Fixed::Fixed(const int n)
+Fixed::Fixed(const int raw)
 {
-	this->_fixed_point_number = n << _k;
+	this->_fixed_point_number = raw << _k;
 }
 
 Fixed::Fixed(const float f)
@@ -35,9 +35,9 @@ int		Fixed::getRawBits(void) const
 	return this->_fixed_point_number;
 }
 
-void	Fixed::setRawBits(int const n)
+void	Fixed::setRawBits(int const raw)
 {
-	this->_fixed_point_number = n;
+	this->_fixed_point_number = raw;
 }
 
 float	Fixed::toFloat(void) const

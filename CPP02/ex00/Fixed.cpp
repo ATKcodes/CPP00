@@ -31,7 +31,7 @@ int		Fixed::getRawBits(void) const
 
 }
 
-void	Fixed::setRawBits(int const n)
+void	Fixed::setRawBits(int const raw)
 {
-	this->_fixed_point_number = n;
+	this->_fixed_point_number = raw;
 }
